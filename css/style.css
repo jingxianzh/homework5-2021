@@ -79,21 +79,22 @@ nav a:hover{
   /* Requirement 3a code here*/
   position: absolute;
   top:-40px;
-  overflow:hidden;
 }
 
 /* Requirement 3b code here*/
 .skip a:focus{
   top:0;
+  position: absolute;
 }
 
 /* Requirement 4 code here*/
-:focus-within{
-border: 2px solid;
+*:focus{
+  border: 2px solid black;
 }
 
 .container{
   /* Requirement 5 code here*/
+  display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: repeat(5, auto);
   grid-row-gap: 15px;
@@ -115,7 +116,7 @@ header{
 }
 
 .about, .method, .clients, .contact{
-  grid-template-columns: 2 / 3;
+  grid-column: 2 / span 1;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
@@ -160,7 +161,6 @@ header{
   }
 
   .container{
-    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: repeat(5, 400px);
   }
